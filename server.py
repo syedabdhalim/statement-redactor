@@ -1,4 +1,4 @@
-"""Maybank Redactor - local-only server.
+"""Statement Redactor - local-only server (Maybank credit card statements).
 
 Runs on 127.0.0.1, keeps uploaded statements in memory only, and uses
 PyMuPDF true redaction (text under the boxes is removed, not just covered).
@@ -549,7 +549,7 @@ def public_view(parsed):
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "MaybankRedactor/1.0"
+    server_version = "StatementRedactor/1.0"
 
     def log_message(self, fmt, *args):
         # Keep the console quiet; never log query strings (they may hold ids).
@@ -686,7 +686,7 @@ def main():
         print(f"  {url}")
         print("Close that window first if you want to restart with the latest code.")
         sys.exit(1)
-    print(f"Maybank Redactor running at {url}  (Ctrl+C to stop)")
+    print(f"Statement Redactor running at {url}  (Ctrl+C to stop)")
     if "--no-browser" not in sys.argv:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     try:

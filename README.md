@@ -1,6 +1,10 @@
-# maybank-redactor
+# statement-redactor
 
 Pick the transactions you need to show, and every other transaction gets redacted, all locally on your own machine. Keep and highlight only what you need.
+
+Currently supports Maybank credit card statements.
+
+> **Not affiliated with Maybank.** This is an independent privacy tool for your own statements. It only removes information: it never adds or changes any text or figure, and the export is checked so that everything outside the redaction boxes is still present.
 
 ![App](docs/app.jpg)
 
